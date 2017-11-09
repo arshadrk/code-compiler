@@ -1,5 +1,5 @@
 # ide
-An simple online ide using hackerrank api and ace editor.This uses angularjs for front-end and node js as server.
+An simple online code compiler using hackerrank api and ace editor.This uses angularjs for front-end and node js as server.
 Replace the "hacker rank api key" in compiler.js with your hackerrank api key.
 run server.js on cmd using "node server.js".
 Now access the main file(index.html) the ide will be displayed
