@@ -7,19 +7,11 @@ var port;
 //var index=require('./routes/index')
 var app=express();
 app.set(port,process.env.PORT||3000);
+app.use(express.static(__dirname+"/local/views"));
 app.get('/', function(req,res){
-  res.sendFile(__dirname+'/index.html');
+  res.sendFile(__dirname+'/local/views/index.html');
 });
-String.prototype.escapeSpecialChars = function() {
-    return this.replace(/\\n/g, "\\n")
-               .replace(/\\'/g, "\\'")
-               .replace(/\\"/g, '\\"')
-               .replace(/\\&/g, "\\&")
-               .replace(/\\r/g, "\\r")
-               .replace(/\\t/g, "\\t")
-               .replace(/\\b/g, "\\b")
-               .replace(/\\f/g, "\\f");
-};
+
 app.listen(app.get(port),function(req,res){
   console.log("Listening on port 3000");
 });
