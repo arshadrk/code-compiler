@@ -67,10 +67,9 @@
         
         <button ng-click="run()">run</button>
         <button ng-click="compile()">compile</button>
-      
+        <select ng-model="lang" ng-options="lan as lan for lan in lanarray"></select>
        <div ng-bind-html="output"> </div>
     </div>
-<div ng-view> </div>
 </div>
 <div id="footer">
 <b>Footer</b>
@@ -80,6 +79,7 @@
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/python");
+   
 </script>
 
 </div>
