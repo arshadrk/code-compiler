@@ -11,7 +11,9 @@ app.controller('result',  function($scope,$http){
 		$scope.compilemsg="";
 		$scope.runmsg="";
 		$scope.output="Compiling....";
-		var params={name:{ source:edv,lang: 5,testcases: '["Hello World"]'}};
+		var lan=$scope.lang;
+		var num=lanjson[lan];
+		var params={name:{ source:edv,lang: num,testcases: '["Hello World"]'}};
 		
 		$http.post('http://localhost:3000/run',JSON.stringify(params)).success(function(res){
 			
@@ -45,6 +47,18 @@ app.controller('result',  function($scope,$http){
 		$scope.output=$scope.compilemsg;
 	});
 	
+	}
+	$scope.changeed=function () {
+		if($scope.lang=='c'||$scope.lang=='cpp')
+		{
+			var mode="ace/mode/c_cpp";	
+		}
+		else{
+			var mode="ace/mode/"+$scope.lang;
+		}
+		
+		editor.getSession().setMode(mode);
+		// body...
 	}
 
 })

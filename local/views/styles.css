@@ -1,0 +1,39 @@
+ #result
+    {
+         position: absolute;
+       left: 10px;
+       bottom: 40px;
+        width: 100%;
+        top:80%;
+        font-family:Lucida Console;
+        
+    }
+   
+   
+.navbar-brand{
+    font-size: 35px !important;
+    word-spacing: 8px;
+    font-family:Palatino Linotype;
+}
+#dd{
+    
+    top:10px;
+    margin-top: 13px;
+    font-family: Lucida Console;
+    padding: 5px;
+     margin-right: 20px;
+}
+#runb
+{
+    margin-right: 5px;
+    font-family:Book Antiqua;
+    font-size: 15px;
+     font-weight: 500;
+}
+#compileb
+{
+    margin-right: 20px;
+    font-family:Book Antiqua;
+    font-size: 15px;
+    font-weight: 500;
+}
